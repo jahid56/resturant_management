@@ -1,0 +1,111 @@
+<!-- <div class="container-fluid">
+<div class="row">
+  <div class="container" >
+ 
+<b>
+<table style="font-size: 14px ; background-color: #EDF1F2;"  class="table table-bordered" >
+    <tr>
+        <td valign="top">
+
+            <table style="background-color: #EDF1F2;" class="table table-condensed" class="table-responsive" class="table table-bordered">
+                <thead>
+                    <tr><td>#</td>
+                        <td >
+                            Food for sale
+                        </td>
+                        <td>Type</td>
+                        <td>Price</td>
+                    </tr>
+                </thead>
+                <tbody>
+                                     @foreach ($all as $user)   
+                    <tr> 
+                    <td> {!!$user->id!!}</td>
+                        <td>
+                         
+                {!!$user->name!!}
+
+                        </td>
+                              <td>
+                     {!!$user->type!!}    
+                
+
+                        </td>
+                        <td>
+                          {!!
+
+                        $p=$user->price;
+                          $user->price!!}
+                        </td>
+                        <td>
+                        
+                      <input type="button" class="btn btn-primary" value="Add to cart" 
+                      onclick="AddtoCart('{!!$user->id!!}','{!!$user->name!!}','{!!$user->type!!}',<?php echo $p;?>)"/>
+                         
+                        </td>
+                    </tr>
+                    @endforeach
+                        
+                </tbody>
+
+            </table>
+        </td>
+        <td width="43%" valign="top" >
+
+        <h3>Ordered Food <input style="float: right;" type="button" class="btn btn-danger" value="Remove" onclick="removefromcart()" /></h3>
+            <table style="background-color: #EDF1F2;" class="table table-bordered" class="table table-condensed" id="orderedProductsTbl">
+                <thead>
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            Type
+                        </td>
+                        <td>
+                            Price
+                            
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="orderedProductsTblBody">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                      {!!  Form::open(array('url' => 'buying'));!!}
+                       <td colspan="3" align="right" value="Total Price" id="cart_total">
+
+                        </td>
+
+                    </tr>
+
+                </tfoot>
+            </table>
+             
+            <input type="hidden" id="hidId" name="hidId" value="">
+            <input type="hidden" id="hidName" name="hidName" value="">
+            <input type="hidden" id="hidType" name="hidType" value="">
+            <input type="hidden" id="hidPrice" name="hidPrice" value="">
+            <input type="submit" class="btn btn-success" onclick="passData()" style=" float:right" value="Buy" />
+             {!!  Form::close(); !!}
+       
+        @if (count($errors) > 0)
+        <div class="alert alert-danger" style="clear :right">
+        
+        @foreach ($errors->all() as $error)
+                {{ $errors->first('hidId') }}
+            @endforeach
+        
+    </div>
+@endif
+        </td>
+    </tr>
+</table>
+
+</b>
+
+
+</div>
+</div>
+</div> -->
