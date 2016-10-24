@@ -1,13 +1,14 @@
 ## Resturant Management System
 
 ## Configure
-1.First Rename .env.example to .env
-2.First create your database
-3.Change the database name in .env file
-4.Run Composer update command
-5.Run php artisan key:generate command
-6.Run php artisan migrate command
-7.Run php artisan db:seed command
+
+###First Rename .env.example to .env
+###First create your database
+###Change the database name in .env file
+###Run Composer update command
+###Run php artisan key:generate command
+###Run php artisan migrate command
+###Run php artisan db:seed command
 
 You are now free to use this system
 
